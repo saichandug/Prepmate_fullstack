@@ -1,0 +1,60 @@
+const q = (id, company, topic, difficulty, question, answer, concepts) => ({
+  id, company, topic, difficulty, question, answer, concepts
+});
+
+export const questions = [
+  q("AMZ-001", "Amazon", "Arrays", "Easy", "How would you find the maximum element in an array?", "Scan the array once while maintaining the largest value seen so far. This takes O(n) time and O(1) extra space.", ["single pass", "O(n)", "O(1)"]),
+  q("AMZ-002", "Amazon", "Strings", "Easy", "How can you check whether a string is a palindrome?", "Compare characters from both ends moving toward the center, or use two pointers. The two-pointer approach is O(n) time.", ["two pointers", "palindrome", "O(n)"]),
+  q("AMZ-003", "Amazon", "HashMap", "Medium", "What is a HashMap and why is it useful?", "A HashMap stores key-value pairs and normally provides average O(1) insertion, lookup and deletion. It is useful when fast key-based access is needed.", ["key-value", "O(1)", "lookup"]),
+  q("AMZ-004", "Amazon", "Stack", "Easy", "Give a practical use case for a stack.", "Stacks follow LIFO order and are used for function calls, undo operations, expression evaluation and balanced-parentheses checking.", ["LIFO", "undo", "function calls"]),
+  q("AMZ-005", "Amazon", "Queue", "Easy", "How is a queue different from a stack?", "A queue follows FIFO order while a stack follows LIFO order. Queues are common in scheduling and breadth-first search.", ["FIFO", "LIFO", "BFS"]),
+  q("AMZ-006", "Amazon", "Searching", "Medium", "When can binary search be used?", "Binary search requires an ordered search space. It repeatedly halves the range, giving O(log n) time.", ["sorted", "halves", "O(log n)"]),
+  q("AMZ-007", "Amazon", "Linked List", "Medium", "What is a linked list?", "A linked list is a sequence of nodes where each node stores data and a link to another node. Insertion can be O(1) when the position/node is already known.", ["nodes", "links", "O(1)"]),
+  q("AMZ-008", "Amazon", "Trees", "Medium", "What is tree traversal?", "Tree traversal means visiting nodes according to an order such as preorder, inorder, postorder or level order.", ["preorder", "inorder", "postorder"]),
+  q("AMZ-009", "Amazon", "Sorting", "Medium", "Why is time complexity important when choosing a sorting algorithm?", "Time complexity estimates how running time grows with input size. It helps select an algorithm that scales appropriately.", ["time complexity", "input size", "scalability"]),
+  q("AMZ-010", "Amazon", "Time & Space Complexity", "Easy", "What do time and space complexity describe?", "Time complexity describes growth in execution work, while space complexity describes additional memory requirements as input grows.", ["time complexity", "space complexity", "memory"]),
+  q("TCS-001", "TCS", "Java/Python basics", "Easy", "What is the difference between a compiler and an interpreter?", "A compiler translates a program before execution, while an interpreter executes program instructions through an interpretation process. Implementations can combine both approaches.", ["compiler", "interpreter", "execution"]),
+  q("TCS-002", "TCS", "Arrays", "Easy", "What is an array?", "An array stores elements in an indexed sequence, commonly in contiguous memory. Access by index is typically O(1).", ["indexed", "O(1)", "sequence"]),
+  q("TCS-003", "TCS", "Strings", "Easy", "Why are strings important in programming interviews?", "Strings test traversal, comparison, counting, hashing, parsing and two-pointer techniques.", ["traversal", "hashing", "two pointers"]),
+  q("TCS-004", "TCS", "OOP", "Medium", "What are the four commonly taught pillars of OOP?", "Encapsulation, abstraction, inheritance and polymorphism are commonly taught as the four pillars.", ["encapsulation", "abstraction", "inheritance", "polymorphism"]),
+  q("TCS-005", "TCS", "SQL", "Medium", "What is the purpose of a SQL JOIN?", "A JOIN combines rows from related tables using a matching condition, allowing data to be queried across tables.", ["join", "tables", "matching"]),
+  q("TCS-006", "TCS", "Basic DSA", "Easy", "What is the difference between an array and a linked list?", "Arrays provide fast indexed access, while linked lists provide flexible node insertion/deletion when the relevant node or position is known.", ["indexed access", "nodes", "insertion"]),
+  q("INF-001", "Infosys", "Arrays", "Easy", "How can duplicate values in an array be detected?", "Use a set or hash-based structure to remember values already seen. This generally takes O(n) expected time and O(n) extra space.", ["set", "hash", "O(n)"]),
+  q("INF-002", "Infosys", "Strings", "Medium", "How would you count character frequencies in a string?", "Use a map keyed by character and increment the count for every character.", ["frequency", "map", "count"]),
+  q("INF-003", "Infosys", "OOP", "Medium", "What is polymorphism?", "Polymorphism allows a common interface or method name to represent different implementations, such as overriding in object-oriented languages.", ["overriding", "interface", "implementation"]),
+  q("INF-004", "Infosys", "SQL", "Easy", "What is a primary key?", "A primary key uniquely identifies a row in a table and should not contain duplicate values.", ["unique", "row", "table"]),
+  q("INF-005", "Infosys", "DSA", "Medium", "What is the difference between BFS and DFS?", "BFS explores level by level, commonly with a queue. DFS explores a path deeply, commonly with recursion or a stack.", ["BFS", "DFS", "queue", "stack"]),
+  q("DEL-001", "Deloitte", "SQL", "Medium", "What is normalization in databases?", "Normalization organizes relational data to reduce unnecessary duplication and update anomalies.", ["duplication", "anomalies", "relational"]),
+  q("DEL-002", "Deloitte", "OOP", "Easy", "What is encapsulation?", "Encapsulation bundles data with the operations that use it and controls access to internal state.", ["data", "access", "state"]),
+  q("DEL-003", "Deloitte", "Java/Python", "Easy", "What is exception handling?", "Exception handling provides a structured way to respond to exceptional runtime conditions without abruptly terminating normal program flow.", ["exception", "runtime", "handling"]),
+  q("DEL-004", "Deloitte", "DSA", "Medium", "What is a hash table useful for?", "It provides fast average-case key-based lookup and is useful for counting, membership checks and mapping keys to values.", ["key", "lookup", "mapping"]),
+  q("DEL-005", "Deloitte", "Problem Solving", "Medium", "How do you approach an unfamiliar coding problem?", "Clarify requirements, work through examples, identify constraints, propose a simple solution, analyze complexity, then optimize and test edge cases.", ["constraints", "complexity", "edge cases"]),
+  q("GEN-001", "General", "Behavioral", "Easy", "Tell me about yourself and your technical background.", "Give a concise introduction covering education, relevant projects, technical skills and the type of role you are targeting.", ["education", "projects", "skills"]),
+  q("GEN-002", "General", "Behavioral", "Medium", "Describe a challenging project and how you solved a problem in it.", "Use a situation-task-action-result structure and emphasize your specific contribution, trade-offs and measurable outcome.", ["situation", "action", "result"]),
+  q("GEN-003", "General", "DSA", "Medium", "How do you analyze the complexity of an algorithm?", "Identify the dominant operations, express how they grow with input size, and consider both time and auxiliary space.", ["time", "space", "input size"]),
+  q("GEN-004", "General", "SQL", "Medium", "What is the difference between WHERE and HAVING?", "WHERE filters rows before grouping, while HAVING filters groups after aggregation.", ["WHERE", "HAVING", "grouping"]),
+  q("GEN-005", "General", "OOP", "Easy", "Explain inheritance in simple terms.", "Inheritance lets a class derive behavior and structure from another class, supporting reuse and specialization.", ["class", "reuse", "specialization"])
+];
+
+
+
+// General coding/interview practice is intentionally independent of any company.
+questions.push(
+  q("GEN-006", "General", "Arrays", "Easy", "How do you reverse an array in place?", "Use two pointers, one at each end, and swap values while moving inward. This is O(n) time and O(1) extra space.", ["two pointers", "swap", "O(1)"]),
+  q("GEN-007", "General", "Strings", "Medium", "How can you determine whether two strings are anagrams?", "Normalize the strings and compare character frequencies, or sort both strings and compare them.", ["frequency", "sorting", "anagram"]),
+  q("GEN-008", "General", "HashMap", "Easy", "How would you find the first repeated value in an array?", "Scan from left to right and store seen values in a hash set. The first value already in the set is the first repeat.", ["set", "seen", "lookup"]),
+  q("GEN-009", "General", "Linked List", "Medium", "How do you detect a cycle in a linked list?", "Use slow and fast pointers. If they meet, a cycle exists. This is commonly called Floyd's cycle detection algorithm.", ["slow", "fast", "cycle"]),
+  q("GEN-010", "General", "Stack", "Easy", "How would you validate balanced parentheses?", "Push opening brackets onto a stack and match each closing bracket with the most recent opening bracket.", ["stack", "opening", "closing"]),
+  q("GEN-011", "General", "Queue", "Medium", "How can a queue be implemented using two stacks?", "Use one stack for incoming elements and another for outgoing elements. Transfer elements only when the outgoing stack is empty.", ["two stacks", "incoming", "outgoing"]),
+  q("GEN-012", "General", "Trees", "Medium", "What is the height of a binary tree?", "The height is the length of the longest downward path from the root to a leaf. It can be computed recursively from the heights of the children.", ["binary tree", "root", "leaf"]),
+  q("GEN-013", "General", "Graphs", "Medium", "When would you choose BFS over DFS?", "BFS is useful for level-order exploration and shortest paths in an unweighted graph. DFS is often useful for exhaustive traversal and recursion-based problems.", ["BFS", "DFS", "shortest path"]),
+  q("GEN-014", "General", "Sorting", "Medium", "What is the typical time complexity of merge sort?", "Merge sort runs in O(n log n) time and generally uses O(n) auxiliary space for merging.", ["merge sort", "O(n log n)", "O(n)"]),
+  q("GEN-015", "General", "Searching", "Easy", "What is linear search?", "Linear search checks elements one by one until the target is found or the collection ends. Its worst-case time complexity is O(n).", ["one by one", "O(n)", "target"]),
+  q("GEN-016", "General", "Dynamic Programming", "Medium", "What is the main idea behind dynamic programming?", "Break a problem into overlapping subproblems, store results of solved subproblems, and reuse them to avoid repeated work.", ["overlapping", "subproblems", "reuse"]),
+  q("GEN-017", "General", "Time & Space Complexity", "Easy", "What does O(log n) usually indicate?", "It usually means the amount of work grows logarithmically with input size, as in repeatedly halving a search space.", ["logarithmic", "halving", "input size"]),
+  q("GEN-018", "General", "Problem Solving", "Medium", "What edge cases should you check before submitting a coding solution?", "Check empty input, one element, duplicate values, boundary values, already-sorted input and unusually large input where relevant.", ["empty", "duplicates", "boundary"]),
+  q("GEN-019", "General", "Arrays", "Medium", "How would you find the second-largest distinct number?", "Track the largest and second-largest distinct values in one pass, updating them when a larger distinct value is encountered.", ["distinct", "one pass", "largest"]),
+  q("GEN-020", "General", "Strings", "Easy", "How can you reverse the words in a sentence?", "Split the sentence into words, reverse the word sequence, and join the words with the desired spacing.", ["split", "reverse", "join"])
+);
+
+export const genericQuestions = questions.filter((item) => item.company === "General");
